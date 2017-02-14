@@ -1,0 +1,7 @@
+
+<%= form_for(@article) do |f| %>
+  <p>Name: <%= f.text_field :title %></p>
+  <p>Write here your text! You can use Markdown!!</p>
+  <p><%= f.text_area(:content, size: '200x30') %></p>
+  <%= f.submit %>
+<% end %>

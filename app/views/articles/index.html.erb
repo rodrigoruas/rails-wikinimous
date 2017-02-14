@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+
+<h3><%= link_to "Add!", new_article_path(@articles) %></h3>
+
+<% @articles.each do |a| %>
+  <h3><%= link_to a.title, article_path(a) %></h3>
+
+  <p> <%= Kramdown::Document.new(a.content).to_html.html_safe %></p>
+<% end %>
+
+
